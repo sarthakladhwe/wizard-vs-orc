@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizard vs Orc</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="hero">
+            <!-- CHALLENGE -->
+            <!-- 1. Render the Wizard card from index.js -->
+            <div class="character-card">
+                <h4 class="name"> Wizard </h4>
+                <img class="avatar" src="images/wizard.png"/>
+                <p class="health">health: <b> 60 </b></p>
+                <div class="dice-container"><div class="dice"> 6 </div></div>
+            </div>        
+        </div>
+        <div id="monster">
+            <!-- CHALLENGE -->
+            <!-- 2. Render the Orc card from index.js -->
+            <div class="character-card">
+                <h4 class="name"> Orc </h4>
+                <img class="avatar" src="images/orc.png"/>
+                <p class="health">health: <b> 10 </b></p>
+                <div class="dice-container"><div class="dice"> 4 </div></div>
+            </div>
+            
+        </div>    
+    </main>
+    <section id="actions">
+        <button id="attack-button">Attack</button>
+    </section>
+    <script src="/index.js"></script>
+</body>
+</html>
