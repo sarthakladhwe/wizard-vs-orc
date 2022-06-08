@@ -30,11 +30,8 @@ function Character(data) {
     
     const { elementId, name, avatar, health, diceCount } = data;
     
-    this.elementId = elementId;
-    this.name = name;
-    this.avatar = avatar;
-    this.health = health;
-    this.diceCount = diceCount;
+    Object.assign(this, data)
+
     this.getCharacterHTML = function() {
         const diceHtml = getDiceHtml(this.diceCount)
 
