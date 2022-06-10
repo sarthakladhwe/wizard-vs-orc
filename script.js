@@ -15,15 +15,24 @@ function attack() {
     monster.takeDamage(wizard.currentDiceScore)
     render()
     if(wizard.dead){
-        endGame()
+        setTimeout(() => {
+            endGame()
+            attackBtn.disabled = false;
+        }, 1500)
+        attackBtn.disabled = true;
     }
     else if(monster.dead){
         if(monstersArray.length > 0){
-            monster = getNewMonster()
-            render()
+            setTimeout(() => {
+                monster = getNewMonster()
+                render()
+                attackBtn.disabled = false;
+            }, 1500) 
+            attackBtn.disabled = true;
         }
         else{
-            endGame()
+            setTimeout(() => endGame(), 1500)
+            attackBtn.disabled = true;
         }
     }  
 }
@@ -44,7 +53,8 @@ function endGame() {
         `
 }
 
-document.getElementById("attack-button").addEventListener('click', attack)
+const attackBtn = document.getElementById("attack-button")
+attackBtn.addEventListener('click', attack)
 
 function render() {
     document.getElementById('hero').innerHTML = wizard.getCharacterHtml()
