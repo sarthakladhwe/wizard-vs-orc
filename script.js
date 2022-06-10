@@ -9,8 +9,8 @@ function getNewMonster() {
 }
 
 function attack() {
-    wizard.getDiceHtml()
-    monster.getDiceHtml()
+    wizard.setDiceHtml()
+    monster.setDiceHtml()
     wizard.takeDamage(monster.currentDiceScore)
     monster.takeDamage(wizard.currentDiceScore)
     render()
